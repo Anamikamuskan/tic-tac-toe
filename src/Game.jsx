@@ -41,6 +41,7 @@ const Game = () => {
 
   const reset = () => {
     setboard(initialBoard);
+    setXIsNext("✖️")
   };
 
   function jumpTo(nextMove) {}
@@ -86,7 +87,7 @@ const Game = () => {
       <div className="text-2xl">
         {winner?.winner
           ? `${winner.winner} is Winner`
-          : `${xIsNext ? "✖️" : "⭕"} 's Turn`}{" "}
+          : `${xIsNext ? " ✖️" : "⭕"} 's Turn`}{" "}
       </div>
       <div className="grid grid-cols-3">{squares}</div>
       <div className="flex justify-center items-center">
